@@ -1,6 +1,10 @@
-def f(n):
-    if n > 0:
-        return n
-    return None
+def foo(f):
+    def foo2(g):
+        def foo(h):
+            return h
+        return g
+    return f
 
-print(f(3))
+
+h = int(input("Please enter a number: "))
+print(foo(h))
